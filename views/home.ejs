@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs'); -%>
+<!-- header -->
+<h1><%= title %></h1>
+<p> <%= content %> </p>
+<% posts.forEach(function(post){ %>
+    <h1><%= post.Title.toUpperCase() %></h1>
+    <p><%= post.Content.substring(0,150) %>...<a href="/posts/<%= post.Title %>"   >read more</a>
+    </p>
+<%  }) %>
+
+<!-- footer -->
+<%- include('partials/footer.ejs'); -%> <!-- here partials is the file name-->
+
+
+
+<!--using for loop  -->
+<!-- <% for(var i=0;i<posts.length;i++){ %>
+<% console.log(posts[i].title); %>
+<% } %> -->

@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs'); -%>
+<!-- header -->
+<h1><%= title %> </h1>
+<form action="/compose" class="inline" method="post">
+    <label class="inline">TITLE</label>
+    <input type="text" class="inline box" 
+   autocomplete="off" autofocus="on" name="newTitle" placeholder="TITLE OF THE BLOG">
+    <lable class="inline"><strong>POST</strong></lable>
+    <textarea  rows="6" class="inline box"
+   cols="60%" placeholder="BLOG CONTENT HERE" name="postContent"></textarea>
+    <button class="btn btn-md btn-primary custom" type="submit" name="submit" >PUBLISH</button>
+</form> 
+<!-- footer -->
+<%- include('partials/footer.ejs'); -%>

@@ -4,12 +4,19 @@
 <p> <%= content %> </p>
 <% posts.forEach(function(post){ %>
     <h1><%= post.Title.toUpperCase() %></h1>
-    <p><%= post.Content.substring(0,150) %>...<a href="/posts/<%= post.Title %>"   >read more</a>
-    </p>
+    <form method="post" action="/posts/<%= post.Title %>"  >
+        <!-- <input type="hidden" name="id" value=<%=post._id %> > </input> -->
+     <p><%= post.Content.substring(0,150) %>...
+        <!-- <a href="/posts/<%=post.Title%>"  > -->
+        <button type="submit"  name="id" value=<%=post._id %>>read more</button>
+     </p>
+    </form>
 <%  }) %>
 
 <!-- footer -->
-<%- include('partials/footer.ejs'); -%> <!-- here partials is the file name-->
+<!-- <%- include('partials/footer.ejs'); -%> -->
+<!-- this footer is not working on smaller screen. -->
+ <!-- here partials is the file name -->
 
 
 
